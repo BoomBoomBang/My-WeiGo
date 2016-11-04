@@ -1,0 +1,45 @@
+*{margin: 0;padding:0}
+html,body{width:100%;height:100%;}
+a{text-decoration: none;}
+li{list-style: none;}
+/*--头部-Start---*/
+header{width:100%;height:10%;display: flex;justify-content: space-around;align-items: center;}
+header img{width:1rem;height:2rem;}
+header .fa img{width:1.5rem;height:1.5rem;}
+header .fb img{width:1.5rem;height:1.5rem;}
+header input{width:11rem;height:2rem;padding-left:1.2rem;border-radius: 10px;border:none;background:#f9f9f9;}
+header .fa{position:absolute;left:0.5rem;top:0.68rem;}
+/*--热搜分类-Start---*/
+.swiper-container{width:100%;height:80%;}
+.swiper-slide{width:100%;hegiht:100%;}
+.swiper-slide .swiper1{width:100%;height:20%;background:white;}
+.swiper1 .swiper1a{width:100%;height:60%;display: flex;justify-content:center;align-items: flex-end;}
+.swiper1 .swiper1a p{width:30%;height:1%;border-bottom:1px solid #000;}
+.swiper1 .swiper1a span{font-size:22px;}
+.swiper1>p{text-align: center;font-size:15px}
+/*---图标---*/
+.swiper2{width:100%;height:80%;display: flex;flex-wrap: wrap;justify-content: space-around;align-items: center;}
+.swiper2 .swiper2_div{width:30%;height:25%;background: hotpink;border-radius:40px;display: flex;flex-direction: column;overflow: hidden;}
+.swiper2_div a img{width:40%;height:40%;}
+.swiper2_div a{margin-left:5px;margin-top:10px;}
+.swiper2_div p{font-size:15px;color:#fff;align-self:center;}
+.swiper2_div p a{color:white;font-weight: 900;}
+.swiper2_div span{font-size:12px;color:#fff;text-align: right;}
+/*--热搜第二页-Start---*/
+.swiper-slide{width:100%;hegiht:100%;}
+.swiper-slide .swiper1{width:100%;height:20%;background:white;}
+.swiper3 .swiper1a{width:100%;height:60%;display: flex;justify-content:center;align-items: flex-end;}
+.swiper3 .swiper1a p{width:30%;height:1%;border-bottom:1px solid #000;}
+.swiper3 .swiper1a span{font-size:22px;}
+.swiper3>p{text-align: center;font-size:15px}
+/*--图标2-Start---*/
+.swiper4{width:100%;height:100%;display: flex;flex-flow: wrap;justify-content: space-around;align-content: flex-start;}
+.swiper4 dl{width:30%;height:22%;display:flex;align-content: center;align-items: center;flex-direction: column;}
+.swiper4 dl dt{width:100%;height:80%;}
+.swiper4 dl dt img{width:100%;height:100%;}
+.swiper4 dl dd a{font-size:15px;color:#ff6876;}
+/*--底部-Start---*/
+footer{width:100%;height:10%;position:fixed;bottom:0;display: flex;justify-content: space-around;align-items: center;}
+footer .foot{font-size:1.5rem;text-align:center}
+footer dd {font-size:15px;font-weight:900;text-align: center;}
+footer dl:hover{color:#ff659d}

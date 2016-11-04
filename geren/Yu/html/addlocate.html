@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title></title>
+		<link rel="stylesheet" href="../iconfont_address/iconfont.css">
+		<link rel="stylesheet" href="../css/locate.css">
+		<link rel="stylesheet" href="../css/add.css">
+		<script src="../js/rem.js"></script>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<i class="iconfont icon-jinlingyingcaiicon01 font"></i>
+			<h2>添加收货地址</h2>
+			<span id="set">保存</span>
+		</header>
+		<section>
+			<input type="text" id="name" value="收货人姓名"><br/>
+			<input type="text" id="tel" value="联系电话"><br/>
+			<input type="text" id="email" value="邮编"><br/>
+			<input type="text" id="location" value="收货地址">
+			
+		</section>
+	</body>
+</html>
+<script>
+	$(function(){
+		$(".font").click(function(){
+			window.location.href="locate.html";
+		})
+
+		var text;  // 全局变量用于保存文本框的内容
+	    $("input:text").focus(function() {
+	        text = $(this).val();
+	        $(this).val("");
+	    });
+	    $("input:text").blur(function() {
+	        $(this).val()!="" || $(this).val(text);
+	    });
+		
+		
+		
+		var name = document.getElementById("name");
+		var tel = document.getElementById("tel");
+		var email = document.getElementById("email");
+		var location = document.getElementById("location");
+	
+		var set = document.getElementById("set");
+		
+		set.onclick = function(){
+//			var userInfo = {
+//				username: name.value,
+//				userphone: tel.value,
+//				useremail: email.value,
+//				userlocate: location.value
+//			};
+			var userInfo =  name.value +","+ tel.value +","+ email.value +","+ location.value;
+			var num = localStorage.length + 1;
+			localStorage.setItem("userInfohY"+num,userInfo);
+//			var userInfos = num+1;
+//			localStorage.setItem("userInfos",JSON.stringify(userInfo));
+			console.log(userInfo);
+			window.location.href="locate.html";
+		}
+	
+	
+	})
+	
+</script>

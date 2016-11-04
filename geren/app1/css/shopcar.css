@@ -1,0 +1,217 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+body header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: deeppink;
+  background-color: #ffffff;
+}
+body header a {
+  font-size: 2rem;
+  color: deeppink;
+  font-size: 1.15rem;
+  border-left: 1rem solid #ffffff;
+}
+body header h3 {
+  font-size: 1rem;
+  margin-left: 33%;
+}
+body #kong {
+  width: 100%;
+  height: 0.6rem;
+  background-color: #e1e1e1;
+  margin-top: 3rem;
+}
+body hgroup {
+  width: 100%;
+  height: 1.8rem;
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body hgroup p {
+  margin-left: 3%;
+  font-size: 0.9rem;
+  color: #959595;
+  flex-grow: 1;
+}
+body hgroup p span {
+  color: deeppink;
+  font-size: 0.7rem;
+}
+body hgroup h5 {
+  font-size: 0.8rem;
+  color: darkgray;
+}
+body hgroup h5:hover {
+  color: orange;
+}
+body hgroup h6 {
+  margin-right: 4%;
+}
+body section {
+  width: 100%;
+  height: 7.5rem;
+  border-bottom: 2px solid darkgray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+body section .left {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #c8c8c8;
+  color: white;
+  text-align: center;
+  line-height: 0.8rem;
+  border-radius: 50%;
+  margin-left: 3%;
+  font-size: 0.6rem;
+}
+body section .center {
+  width: 85%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 5rem;
+  margin-left: 3%;
+}
+body section .center img {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+body section .center div {
+  margin-left: 2%;
+  width: 100%;
+  height: 4.9rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+body section .center div h2 {
+  color: gray;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+}
+body section .center div h3 {
+  color: gray;
+  font-size: 0.6rem;
+  line-height: 1.3rem;
+}
+body section .center div del {
+  color: gainsboro;
+  font-size: 0.8rem;
+}
+body section .center div h5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: deeppink;
+  line-height: 1rem;
+  font-size: 0.7rem;
+  position: relative;
+}
+body section .center div h5 i {
+  position: absolute;
+  right: 7%;
+}
+body section .center div h5 span {
+  position: absolute;
+  left: 10%;
+}
+body section .postage {
+  position: absolute;
+  bottom: 3%;
+  left: 12%;
+  color: gray;
+  font-size: 0.8rem;
+}
+body section .postage b {
+  color: deeppink;
+}
+body section .postage span {
+  color: deeppink;
+  font-size: 0.7rem;
+}
+body section .postage em {
+  font-size: 0.5rem;
+}
+body section h4 {
+  position: absolute;
+  right: 4%;
+  bottom: 5%;
+  display: none;
+}
+body footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 888;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  border-top: 1px solid gainsboro;
+}
+body footer .right {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #c8c8c8;
+  color: white;
+  text-align: center;
+  line-height: 0.8rem;
+  border-radius: 50%;
+  margin-left: 3%;
+  font-size: 0.6rem;
+}
+body footer div {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #c8c8c8;
+  color: white;
+  text-align: center;
+  line-height: 0.8rem;
+  border-radius: 50%;
+  margin-left: 3%;
+  font-size: 0.6rem;
+}
+body footer p {
+  color: #959595;
+  font-size: 0.9rem;
+  margin-left: 11%;
+}
+body footer p span {
+  color: deeppink;
+  font-size: 0.8rem;
+}
+body footer a {
+  display: block;
+  width: 20%;
+  height: 1.2rem;
+  text-align: center;
+  line-height: 1.2rem;
+  color: white;
+  background-color: #c8c8c8;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  border-radius: 6px;
+  font-size: .75rem;
+}
+body .gezi {
+  width: 100%;
+  height: 0.6rem;
+  background-color: #e1e1e1;
+}

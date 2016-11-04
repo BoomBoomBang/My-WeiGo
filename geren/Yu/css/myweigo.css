@@ -1,0 +1,209 @@
+
+*{
+	margin:0;
+	padding: 0;
+	
+}
+body,html{
+	height:100%;
+	width:100%;
+	
+	
+}
+ul,ol,li{
+	list-style: none;
+}
+a,u{
+	text-decoration: none;
+}
+
+.header{
+	width:100%;
+	height:4.8rem;
+	background: #aca298;
+	background-size: 100% 100%;
+	position: relative;
+	border-bottom: 2px solid #e9d5cc;
+}
+.header img{
+	position: absolute;
+	top:15%;
+	left: 5%;
+	width:2.75rem;
+	height: 2.75rem;
+	border-radius: 50%;
+}
+.header h1{
+	position: absolute;
+	left:25%;
+	top:25%;
+	font-size: 0.7rem;
+	color:#fff;
+	
+}
+.header #btn1{
+	position: absolute;
+	width:1.95rem;
+	height:1.15rem;
+	background: #fdd478;
+	color:#fff;
+	border: 0 none;
+	border-radius: 20%;
+	left:25%;
+	top:55%;
+	text-align: center;
+	line-height: 1.15rem;
+	font-size: 0.6rem;
+}
+
+.header #btn2{
+	position: absolute;
+	right:10%;
+	top:38%;
+	border: 0 none;
+	width:0.525rem;
+	height:0.975rem;
+	outline: 0 none;
+	background: url(../img/myweigoimg/btn3.jpg) no-repeat;
+	background-size: 100% 100%;
+	
+}
+
+.mymoney{
+	width:100%;
+	height:2rem;
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.mymoney h2{
+	width:3.275rem;
+	height:1.275rem;
+	margin-left: 5%;
+	border: 1px solid #e7e7e7;
+	border-radius: 20%;
+	text-align: center;
+	line-height: 1.275rem;
+	font-size: 0.6rem;
+	color:#000;
+	
+}
+
+.mymoney p{
+	position: absolute;
+	left:28%;
+	font-size: 0.6rem;
+	color: #000;
+	line-height: 2rem;
+}
+.mymoney p span{
+	font-size: 1rem;
+	color:#fa6c9c
+}
+.mymoney #btn3{
+	width:2.2rem;
+	height:1.35rem;
+	background: #fa6c9c;
+	font-size: 0.6rem;
+	border: 0 none;
+	outline: 0 none;
+	text-align: center;
+	line-height: 1.35rem;
+	border-radius: 20%;
+	margin-right: 5%;
+	color:#fff;
+}
+
+.goodmes{
+	width:100%;
+	height:2.7rem;
+	
+	background: #fff;
+	border-top: 0.45rem solid #f2eeeb;
+	border-bottom:  0.7rem solid #F2EEEB;
+}
+.goodmes ul{
+	width:100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.goodmes ul li{
+	width:24%;
+	border-right: 1px solid #e6e6e6;
+	
+
+	text-align: center;
+	font-size: 0.4rem;
+	color:#000;
+}
+.goodmes ul li p:nth-child(1){
+	font-size: 0.75rem;
+	line-height: 1rem;
+	font-weight: 600;
+}
+
+.list{
+	width: 100%;
+	height:20rem;
+	background: #fff;
+	
+	
+}
+.list ul{
+	width:95%;
+	margin-left: 5% ;
+	margin-bottom: 3rem;
+
+}
+.list ul li{
+	display: flex;
+	position: relative;
+	align-items: center;
+	width: 100%;
+	height:2.25rem;
+	font-size: 0.6rem;
+	line-height: 2.25rem;
+	color:#000;
+	border-bottom: 1px solid #d5d5d5;
+}
+.list ul li .iconfont{
+	font-size: 1rem;
+	margin-right: 5%;
+}
+.list ul li span{
+	height:2.25rem;
+	width: 0.375rem;
+	position: absolute;
+	right:5%;
+	line-height: 2.25rem;
+	
+}
+footer{
+	width: 100%;
+	height: 2.6rem;
+	position: fixed;
+	bottom: 0;
+	background: #Fff;
+}
+footer ul {
+	width: 100%;
+	height: 3rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+footer ul li{
+	color: #757172;
+	text-align: center;
+	font-size: 0.5rem;
+}
+footer ul li .iconfont2{
+	font-size: 1.2rem;
+}
+

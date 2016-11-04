@@ -1,0 +1,62 @@
+*{margin: 0;padding:0}
+html,body{width:100%;height:100%;}
+a{text-decoration: none;}
+li{list-style: none;}
+/*--头部---Start-*/
+header{width:100%;height:2.2rem;display: flex;align-items: center;}
+header a{margin-left: 1rem;color:#fc79a5;}
+header p{font-size:18px;text-align: center;margin-left:18%;color:#fc79a5;font-weight: 900;}
+/*----签到--Start-*/
+article{width:100%;height:11rem;background: goldenrod;background:url(../img/qiandao/1.png) left no-repeat;background-size:100%;display: flex;flex-direction:column;align-content: center;position: relative;}
+article #inp3{width:6.25rem;height:3.38rem;margin-top:27%;margin-left: 30%;opacity: 0;}
+article #inp4{width:8.4rem;height:1.3rem;margin-left: 20%;border:none;visibility: hidden;}
+article #artimg{width:10%;height:5%;margin-left:30%;visibility:hidden;}
+article p{text-align: center;font-size:14px;color:#13894d;font-weight:900;position: absolute;top:60%;left:35%}
+article p span{font-size:20px;color:#e8f17a;}
+article a{font-size:12px;color:#febc47;font-weight:900;margin-left:80%;position: absolute;top:70%}
+article ul{display: flex;width:80%;justify-content: space-around;margin-left:10%;}
+article ul li{width:10px;height:10px;background: #fff;border-radius: 50%;}
+/*----签到说明-Start---*/
+#box{width:80%;margin: 0 auto;position:fixed;top:8%;left:12%;background: #fff;border:1px solid #56382e;display: flex;flex-direction: column;justify-content: space-between;display: none;}
+#box p,h3,li,h2{font-size:15px;color:#56382e;}
+#box input{width:80%;height:5%;border:none;background: #83ce33;font-size:18px;color:#fff;margin-left: 10%;}
+/*----积分抽奖-Start---*/
+aside{width:100%;height:7%;display:flex;align-items: center;}
+aside .asi{width:40%;height:100%;display:flex;align-items: center;}
+aside .asi div{width:10%;height:50%;background: #ff6599;margin-left:10%}
+aside .asi span{font-size:12px;font-weight:900;}
+aside a{font-size:12px;color:#febc47;margin-left:40%;font-weight:900;}
+/*----积分说明-Start---*/
+#box2{width:80%;margin: 0 auto;position:fixed;top:8%;left:12%;background: #fff;border:1px solid #56382e;display: flex;flex-direction: column;justify-content: space-between;display: none;}
+#box2 p,h3,li,h2{font-size:15px;color:#56382e;}
+#box2 input{width:80%;height:5%;border:none;background: #83ce33;font-size:18px;color:#fff;margin-left: 10%;}
+/*----摇现金，抢红包-Start---*/
+section{width:100%^;height:9%;display:flex;justify-content: space-around;}
+section .sec1,.sec2{width:48%;height:100%;display: flex;justify-content: space-between;border:1px solid #f6f6f6;}
+section a{font-size:15px;color:#ff80b5;font-weight:900;}
+section img{width:30%;height:80%;}
+.sec2 a{color:#fb7444}
+/*----分享赚积分-Start---*/
+hgroup{width:100%;height:7%;display:flex;align-items: center;}
+hgroup .asi{width:40%;height:100%;display:flex;align-items: center;}
+hgroup .asi div{width:10%;height:50%;background: #64cf9b;margin-left:10%}
+hgroup .asi span{font-size:12px;font-weight:900;}
+hgroup a{font-size:12px;color:#febc47;margin-left:40%;font-weight:900;}
+/*----分享到微信空间-Start---*/
+#box3{width:100%;height:10%;display: flex;justify-content: space-around;}
+#box3 dl{width:40%;height:100%;display:flex;align-items:center;flex-direction: column;justify-content: space-around;}
+#box3 dl img{width:30%;height:30%;}
+#box3 dl dt{align-self: center;display:flex;justify-content: center;}
+#box3 dl a:nth-child(1){font-size:13px;color:#5dd899;}
+/*---积分换话费-Start---*/
+#box4{width:100%;height:7%;display:flex;align-items: center;}
+#box4 .asi{width:40%;height:100%;display:flex;align-items: center;}
+#box4 .asi div{width:10%;height:50%;background: #ff6b36;margin-left:10%}
+#box4 .asi span{font-size:12px;font-weight:900;}
+#box4 a{font-size:12px;color:#febc47;margin-left:40%;font-weight:900;}
+/*---footer-Start---*/
+footer{width:100%;height:13%;background: goldenrod;display: flex;justify-content: space-between;align-items: center;}
+footer dl{width:25%;height:80%;display:flex;flex-direction: column;align-items:center;}
+footer dl dt{display:flex;justify-content: center;}
+footer img{width:60%;height:60%}
+footer dl a{font-size:11px;color:#8c8b89;}

@@ -1,0 +1,163 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html body{
+	width: 100%;
+	height: 100%;
+	background:#f3efee;
+}
+header{
+	display: flex;
+	color: #ff6599;
+	padding: 4% 10%;
+	background: white;
+}
+.font{
+	font-size: 1.2rem;
+	flex-grow: 1;
+	text-decoration: none;
+	color:red;
+}
+header h2{
+	font-size: 1rem;
+	flex-grow: 2;
+	padding-left: 10%;
+	padding-top: 3%;
+}
+nav{
+	width: 100%;
+	height: 30%;
+	background: white;
+	margin-top: 2%;
+	
+}
+nav ul{
+	display: flex;
+	justify-content: space-around;
+}
+nav ul li{
+	list-style: none;
+	font-size: 0.7rem;
+	text-align: center;
+	padding-top:1% ;
+	line-height: 1.3rem;
+}
+.font{
+	font-size: 1.5rem;
+}
+.line{
+	width: 1px;
+	height: 30px;
+	margin-top: 13px;
+	padding: 0;
+	background: #000;
+	overflow: hidden;
+}
+section{
+	width: 100%;
+   	background: white;
+    margin-top: 5%;
+    padding: 1% 0;
+}
+.goods{
+	width: 95%;
+	border: 1px solid darkgray;
+	border-radius: 10px;
+	display: none;
+	margin: 0 auto;
+	margin-top: 3.5%;
+}
+#store{
+	display: block;
+	width: 95%;
+	height: 5%;
+	font-size: 0.7rem;
+	border-bottom: 1px solid gray;
+	padding: 2%
+	
+}
+.info{
+	    padding: 2%;
+}
+.info dl{
+	display: flex;
+	justify-content: space-around;
+	padding-top: 2%;
+}
+.info dl dt{
+	vertical-align: top;
+    width: 30%;
+    height: 40%;
+    margin-right: 4%;
+}
+.info dl dt img {
+	width: 100%;
+    height: 100%;
+}
+.info dl dd{
+	width: 100%;
+}
+.info dl dd a{
+	color:#000000;
+	font-size: 0.7rem;
+	text-decoration: none;
+	width: 100%;
+}
+.info dl dd b{
+	font-size: 0.6rem;
+	color: gainsboro;
+}
+.info dl dd i{
+	font-size: 0.7rem;
+}
+.info dl dd p{
+	font-size: 0.6rem;
+}
+.confirm,.sure{
+	background: #ff6599;
+	opacity: 0.6;
+	font-size: 0.6rem;
+	border: 1px solid white;
+	border-radius:5px ;
+	padding: 0.2rem;
+    color: white;
+}
+footer{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.8;
+	color: white;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: none;
+}
+footer #save{
+	display: block;
+	width:85%;
+	height: 40%;
+	margin: 0 auto;
+	font-size: 0.8rem;
+    padding: 20% 3% 0 15%;
+}
+#save b{
+	font-size: 0.6rem;
+}
+.yes,.no{
+	font-size: 0.7rem;
+    text-align: center;
+    background: #ff6599;
+    opacity: 1;
+    border: none;
+    border-radius: 5px;
+    padding: 2%;
+    color: white;
+	
+}
+.show{
+	display: none;
+	font-size: 0.8rem;
+	padding: 3%;
+}

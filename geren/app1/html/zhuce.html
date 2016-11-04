@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/zhuce.css">	
+		<script type="text/javascript" src="../js/rem.js" ></script>
+	</head>
+	<body>
+		<div class="nav">
+			<img src="../zhuce/img/zhuce6.png">	
+		</div>
+		<div class="count">
+			<h3>微店购物注册</h3>
+			
+			<div class="inpu"><img src="../zhuce/img/zhuce2.png"> <input type="text" placeholder="手机号" id="txt"></div>
+			<div class="inpu1"><img src="../zhuce/img/zhuce3.png"><input type="password" placeholder="密码" id="pass"></div>
+			<div class="main">
+				<div class="inpu2">
+					<img src="../zhuce/img/zhuce4.png">
+					<input type="text" placeholder="验证码" id="txt1">
+				</div>&nbsp;&nbsp; 
+				<p class="yanzmW"><span id="yanzm"></span></p>         
+			</div>
+			<input type="button" value="注册" id="btn1"> 
+		</div>
+		<div class="footer">
+			<img src="../zhuce/img/zhuce5.png">
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.11.1.min.js" ></script>
+		<script>
+			var btn = document.getElementById("btn1");
+				btn.onclick = function(){
+					var acc = document.getElementById("txt").value;
+					var pass = document.getElementById("pass").value;
+						$.ajax({
+						url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+							data:{
+							status:"register",
+							userID:acc,
+							password:pass
+						},
+						success:function(data){
+							if(data==1){
+								window.location.href="denglu.html";
+							}else if(data==0){
+								alert("用户名重名，请重新注册");
+							}
+						}
+					});
+				}
+				
+				//随机获取数字和字母组合
+				$(window).load(function(){
+					$("#yanzm").html(yzm());
+					//console.log(2222)
+				})
+				$("#yanzm").click(function(){
+//					alert(222);
+					$(this).html(yzm());
+				})
+				//验证码验证
+				function yzm(){
+					function random(min,max){
+						 return parseInt(Math.random()*(max-min+1)+min);
+					}
+					var zfc = new String();
+					var i = 0;
+					while(i<4){
+						zm = random(65,122);
+						if(zm<=90 || zm>=97){
+							zfc += String.fromCharCode(zm);	
+							i++;
+						}
+					}
+					return zfc
+				}
+				
+				$("#txt1").click(function(e){
+				e.stopPropagation();//兼容
+				 shengcheng = $("#yanzm").html();
+				$(document).click(function(){
+					var xie = $("#txt1").val();
+					console.log(shengcheng)
+					console.log(xie)
+					if(shengcheng!=xie){
+						alert("验证码输入错误")
+					}else{
+						alert("验证码正确")
+					}
+				})
+			})
+
+				
+		</script>
+	</body>
+</html>

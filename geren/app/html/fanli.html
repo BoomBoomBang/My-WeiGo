@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		
+		<script src="../js/zepto.js"></script>
+		<script src="../js/iscroll.js"></script>
+		<style type="text/css">
+			html,body{
+				height: 100%;
+				width:100%;
+				font-size: 14px;
+			}
+			*{ 
+				margin: 0; 
+				padding: 0;
+				}
+			.mainPage{
+				display: -webkit-box;
+				display: box; 
+				height: 100%; 
+				background: #ccc;
+				-webkit-box-orient:vertical;
+				box-orient:vertical;
+			}
+			header{ 
+				width: 100%; 
+				height: 55px; 
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				background: #fff; 
+				line-height: 55px; 
+				text-align: center; 
+				position: relative; 
+			}
+			header h1{ 
+				color: pink;
+			}
+			footer{  
+				width: 100%; 
+				height: 3rem; 
+				background: #fff;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			article{  
+				width: 100%; 
+				-webkit-box-flex: 1; 
+				box-flex: 1;
+			/*	text-align: center;*/
+				overflow: hidden; 
+				position: relative;
+				}
+			article div{
+				width:100%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				flex-direction: column;
+				margin-top: 5%;
+			}
+			article>div img{
+				width:90%;
+			}
+			footer i{
+				height:100%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				flex-direction: column;
+			}
+			footer i:nth-child(3) a,footer i:nth-child(3) p{
+				color: #ff82aa;
+			}
+			footer i a{
+				font-size: 1.5rem;
+				color: #ccc;
+			}
+			footer i p{
+				font-size: 0.7rem;
+				color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mainPage">
+			<header>
+				<h1>返利专场</h1>
+			</header>
+			<article id="wrapper">
+				<div id="scrollBox">
+					
+				</div>
+			</article>
+			<footer>
+				<i class="iconfont"><a href="index.html">&#xe613;</a><p>首页</p></i>
+				<i class="iconfont"><a href="hot2.html">&#xe634;</a><p>热搜</p></i>
+				<i class="iconfont"><a href="fanli.html">&#xe653;</a><p>返利专场</p></i>
+				<i class="iconfont"><a href="myweigo.html">&#xe605;</a><p>我的微购</p></i>
+			</footer>
+		</div>
+		<script>
+			var myscroll
+			ajaxsp()
+			loadscr()
+			function ajaxsp(){
+				$.ajax({
+					url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+					dataType:"jsonp",
+					success:function(data){
+						$.each(data,function(i){
+							
+							var odiv=$("<div></div>")
+							var picdiv=$("<div class='ck'>图片加载中。。。</div>")
+							var pic=$("<img src='"+data[i].goodsListImg+"' dataid='"+data[i].goodsID+"'/>")
+							var spname=$("<div>"+data[i].goodsName+"</div>")
+							odiv.append(picdiv)
+							odiv.append(spname)
+							pic.on("load",function(){
+								picdiv.html(pic)
+								myscroll.refresh()
+							})
+							$("#scrollBox").append(odiv)
+						})
+						
+					}
+				})
+			}
+			
+			
+			$("#scrollBox").on("touchend",function(){
+				if(myscroll.y>40){
+					console.log("执行刷新")
+					
+					myscroll.refresh()
+				}else if(myscroll.y<myscroll.maxScrollY-50){
+					ajaxsp()
+				}
+			})
+			
+			function loadscr(){
+				myscroll=new IScroll("#wrapper")
+			}
+			
+			$("#scrollBox").on("click",".ck",function(){
+				var spid = $(this).attr("dataid")
+				var name = localStorage.getItem("name")
+				$.ajax({
+					url:"http://datainfo.duapp.com/shopdata/updatecar.php",
+					data:{
+						userID:name,
+						goodsID:spid
+					},
+					success:function(){
+						if(data=1){
+							window.location.href="xingqing.html"
+						}else{
+							alert("errors")
+						}
+					}
+				});
+			})
+		</script>
+	</body>
+</html>

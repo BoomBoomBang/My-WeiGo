@@ -1,0 +1,21 @@
+section input{
+	border:none;
+	border-bottom: 1px solid #000;
+	width: 80%;
+	height: 20%;
+	font-size: 0.8rem;
+	color: #d6d6db;
+	outline: none;
+	cursor: pointer;
+}
+section{
+	height: 50%;
+	padding-top: 5%;
+	padding: 0 5%;
+    width: 90%;
+    
+}
+.location{
+	border-bottom: none;
+}
+

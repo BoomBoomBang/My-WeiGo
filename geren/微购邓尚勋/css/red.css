@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+button{border: none;}
+
+
+/*红包*/
+.red{width: 70%; height:30%;position: relative; position: absolute; left: 15%; bottom: 25%; z-index: 11;}
+.red>span{width: 100%; height: 100%; background-size: 100%; background-position: center; background-repeat: no-repeat; top: 0; left: 0; position: absolute;}
+.red>button{position: absolute; top: 0%; left: 0%; font-size: 2rem; width: 100%; height: 100%; background: #fdc339; color: #fff; color: #666; }
+.red-jg{display: none; position:absolute; top: 20%; left:15%;text-align: center; padding: 0.5rem; }
+.red-jg>h1{font-size: 2rem; color: red; line-height: 2rem;}
+.red-jg>h5{color: red;}
+
+
+/*按钮*/
+.t-btn{position: absolute; left: 24%; bottom: 10%; width: 9rem; height: 2.5rem;}
+.t-btn>button{width: 100%; background: #ff4242; border-radius: 5px; color: #fff; line-height: 3rem; font-size: 1.5rem;}
+

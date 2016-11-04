@@ -1,0 +1,28 @@
+*{margin: 0;padding:0}
+html,body{width:100%;height:100%;}
+a{text-decoration: none;}
+li{list-style: none;}
+/*--头部-Start---*/
+header{width:100%;height:3rem;display: flex;justify-content: space-around;align-items: center;position: fixed;top:0;z-index: 1;background: #fff;}
+header img{width:1rem;height:2rem;}
+header #fa img{width:1.5rem;height:1.5rem;}
+header .fb img{width:1.5rem;height:1.5rem;}
+header input{width:11rem;height:2rem;padding-left:1.2rem;border-radius: 10px;border:none;background:#f9f9f9;}
+header #fa{position:absolute;left:0.5rem;top:0.68rem;}
+/*--热搜--Start----*/
+#box{width:100%;display:flex;flex-wrap: wrap;justify-content: space-around;margin-top: 3rem;}
+#box dl{width:45%;height:60%;display: flex;flex-direction: column;}
+#box dl .fa{width:100%;height:70%;}
+#box dt{width:100%;height:60%;}
+#box dl img{width:100%;height:80%;}
+#box .thre{width:100%;height:12%}
+#box .four{width:60%;height:12%}
+#box .four input{border:none;width:80%;height:50%}
+#box dl dd{font-size:0.6rem}
+#box .sec{color:red;width:100%;height:8%;font-size:15px;font-weight:900;line-height: 30px;}
+#box a{color:#000}
+/*--底部-Start---*/
+footer{width:100%;height:3rem;position:fixed;bottom:0;display: flex;justify-content: space-around;align-items: center;z-index: 1;background: #fff;}
+footer .foot{font-size:1.5rem;text-align:center}
+footer dd {font-size:15px;font-weight:900;text-align: center;}
+footer dl:nth-child(2){color:#ff659d}

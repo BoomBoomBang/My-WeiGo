@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../img/iconfont/iconfont.css">
+		<link rel="stylesheet" href="../css/locate.css">
+		<script src="../js/rem.js"></script>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		
+	</head>
+	<body>
+		<header>
+			<i class="iconfont icon-jinlingyingcaiicon01 font"></i>
+			<h2>收货地址</h2>
+			<span>添加</span>
+		</header>
+		<section id="write">
+			
+		</section>
+	</body>
+</html>
+<script>
+	
+	$(function(){
+		$("#btn1").click(function(){
+			window.location.href="xinxi.html"
+		})
+		$("span").click(function(){
+			window.location.href="addlocate.html";
+		})
+	})
+	var keyArr = [];
+	var write = document.getElementById("write");
+	for(var i = 0;i<localStorage.length;i++){
+				var keyarr = localStorage.key(i).split("Y");
+				var str = localStorage.getItem(localStorage.key(i));
+				if(keyarr[0]=="userInfoh"){
+					keyArr.push(localStorage.key(i));
+					var arr = localStorage.getItem(localStorage.key(i)).split(",");
+					var prov = arr[0];
+					var city = arr[1];
+					var dist = arr[2];
+					var addr = arr[3];
+					write.innerHTML += "<div id='word' style='width:90%;font-size:0.7rem;padding:1%;line-height:1rem;border: 0.5px solid #000;border-radius: 10px;margin-left: 3%;margin-top: 3%;position:relative;padding-left: 3%;'><p>&nbsp;姓名："+prov+"</p>"
+						+"<p style='margin-top:1%;'>&nbsp;电话："+city+"</p>"
+						+"<p style='margin-top:1%;'>&nbsp;邮编："+dist+"</p>"
+						+"<p style='margin-top:1%;'>&nbsp;地址："+addr+"</p>"
+						+"<input type='button' class='del' value='删除' style='width:20%;position:absolute;right:3%;bottom:3%;background:#ff6599;border:none;border-radius:10px;' />"
+						+"</div>"
+						
+					 
+				}
+			}
+//	var str = localStorage.getItem(localStorage.getItem("userInfos"));
+	//console.log(str);
+//	var str1 = localStorage.getItem("userInfos");
+//	var str = localStorage.getItem("userInfos");
+//	var userInfo = JSON.parse(str1);
+//	var write = document.getElementById("write");
+//	console.log(userInfo.username);
+//	write.innerHTML += "<p>&nbsp;姓名："+userInfo.username+"</p>"
+//						+"<p style='margin-top:2%;'>&nbsp;电话："+userInfo.userphone+"</p>"
+//						+"<p style='margin-top:2%;'>&nbsp;邮编："+userInfo.useremail+"</p>"
+//						+"<p style='margin-top:2%;'>&nbsp;地址："+userInfo.userlocate+"</p>"
+//					 
+//"姓名:"+userInfo.username+"&emsp;电话:"+userInfo.userphone+"&emsp;邮编："+userInfo.useremail+"&emsp;地址:"+userInfo.userlocate;
+
+	$("#word").on("click",".del",function(){
+		var delkey = keyArr[$(".del").index(this)];
+		localStorage.removeItem(delkey);
+		$(this).parent().remove();	
+	})
+	
+	
+	write.style.color = "gray";
+	
+</script>

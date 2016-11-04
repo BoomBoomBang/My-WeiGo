@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=0.6, maximum-scale=1, user-scalable=no"/>
+		<title>抢红包</title>
+		<link rel="stylesheet" type="text/css" href="../css/animate.min.css"/>
+		<link rel="stylesheet" href="../css/csshake.min.css"> 
+		<link rel="stylesheet" href="../css/red.css">
+		
+
+		<style>
+		*{
+		    margin: 0;
+		    padding: 0;
+		 }
+		 html,body{
+		    height: 100%; width: 100%;
+		  }
+		.swiper-container{
+			  width: 100%;
+			  height: 100%;
+			  
+		 }
+		 .swiper-wrapper{
+		 	width: 100%;
+			height: 90%;
+			background-image:url(../img/hongbao/bg.png);
+			background-size: 100% 100%;
+			position: relative;
+			
+		 }
+		 .top{
+		 	width: 100%;
+		 	height: 3rem;
+		 	background: #f7f7f7;
+		 	display: flex;
+		 }
+		 .top p{
+		 	width: 20%;
+		 	text-align: center;
+		 	font-size: 1.5rem;
+		 	color: #ff6599;
+		 	line-height: 3rem;
+		 }
+		 .top h2{
+		 	width: 80%;
+		 	text-align: center;
+		 	font-size: 1rem;
+		 	color: #ff6599;
+		 	line-height: 3rem;
+		 }
+		.swiper-slide{
+			text-align: center;
+		}
+		.swiper-slide img:nth-child(1){
+			position: absolute;
+			left: 15%;
+			top: 5%;
+		}
+		.swiper-slide img:nth-child(2){
+			position: absolute;
+			left: 34%;
+			top: 25%;
+			
+		animation: jump 1s linear infinite;
+      }
+      @keyframes jump{
+      	0{transform:translateX(0)}
+      	50%{transform:translateX(20PX)}
+      	100%{transform: translateX(0PX)}
+      }
+		.swiper-slide img:nth-child(3){
+			position: absolute;
+			left: 65%;
+			top: 22%;
+		}
+		.swiper-slide h3{
+			font-size: 0.7rem;
+			color: white;
+			position: absolute;
+			left: 15%;
+			bottom: 22%;
+		}
+		.btn{
+			width: 70%;
+			height: 28%;
+			background: gray;
+			opacity: 0;
+			position: absolute;
+			left: 4.7rem;
+			bottom:5.625rem;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<div class="top">
+					<p onclick="history.go(-1)"><</p>
+					<h2>抢红包</h2>
+			</div>
+			<div class="swiper-wrapper">
+				
+				<div class="swiper-slide">
+					<img class="animated fadeInLeft" src="../img/hongbao/newyear.png">
+					<img src="../img/hongbao/zhongjiang2.png" />					
+					<img class="animated fadeInRight" src="../img/hongbao/hongbao.png"/>
+				    <!--<button class="btn"></button>-->
+				    <div class="red">
+					    <span style="background-image: url(../img/hongbao/red-w.png);"></span>
+					    <button class="redbutton" type="领取红包">点击抽奖</button>
+					    <div class="red-jg">
+					        <h1>恭喜您！</h1>
+					        <h5></h5>
+					    </div>
+				    </div>
+                    <div class="t-btn">
+					    <button class="btnl">立即领取</button>
+					</div>
+				   <h3>本活动与Apple Inc.无关</h3>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<script src="../js/zepto.min.js"></script>
+        <script src="../js/red.js"></script>
+		<script>
+			$(".btnl").click(function(){
+//		    	alert("领取成功");
+		    	window.location.href="myweigo.html"
+		    })
+	
+		</script>
+		
+	</body>
+</html>

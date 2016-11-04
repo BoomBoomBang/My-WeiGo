@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录</title>
+		<link rel="stylesheet" href="../css/denglu.css">	
+		<script type="text/javascript" src="../js/rem.js" ></script>
+	</head>
+	<body>
+		<div class="nav">
+			<img src="../img/denglu/denglu3.png">	
+		</div>
+		<div class="bigbg">
+			<div class="smallbg">
+				<h3>登录微店购物</h3>
+				<div class="inpu"><img src="../img/denglu/denglu6.png"> <input type="text" placeholder="手机号" id="txt"></div>
+				<div class="inpu1"><img src="../img/denglu/denglu7.png"><input type="password" placeholder="密码" id="pass"></div>
+				<input type="button" value="立即登录" id="btn"> 
+				<input type="checkbox"  id="check"><span>记住我</span><br />
+				<div class="fot">
+					<a href="zhuce.html" class="a1">注册新用户</a>&nbsp;&nbsp;
+					<a href=" " class="a2">忘记密码</a>
+				</div>
+				<p><a href=" ">一键登录</a></p>
+				<div class="qq">
+					<a href="#"><img src="../img/denglu/denglu2.png"></a>&nbsp;
+					<a href="#"><img src="../img/denglu/denglu4.png"></a> 
+				</div>
+			</div>
+		</div>
+		<img src="../img/denglu/denglu8.png" class="bottomimg">		
+		<script type="text/javascript" src="../js/jquery-1.11.1.min.js" ></script>
+		<script>
+			var btn = document.getElementById("btn"); 
+				btn.onclick = function(){
+					var acc = document.getElementById("txt").value;
+					var pass = document.getElementById("pass").value;
+					$.ajax({
+						url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+						data:{
+							status:"login",
+							userID:acc,
+							password:pass
+						},
+						success:function(data){
+							var mag = JSON.parse(data);
+							console.log(mag);
+							if(acc == mag.userID){
+								localStorage.setItem("name",acc)
+								window.location.href = "myweigo.html";
+							}else if(data == 0){
+								alert("用户名不存在,请重新登录");
+							}
+						}
+					});
+				}
+				
+		</script>
+	</body>
+</html>
+

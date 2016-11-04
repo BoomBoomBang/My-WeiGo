@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../iconfont_xingqing/iconfont.css" />
+		<link rel="stylesheet" href="../css/reset(2).css" />
+		<style>
+			html,body{
+				width: 100%;
+				height: 100%;
+				background-color: #f3efee;
+			}
+			header{
+				z-index: 999;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				height: 3rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				color: deeppink;
+				background-color: #ffffff;
+			}
+			header a{
+				color: deeppink;
+				font-size: 1.15rem;
+				border-left: 1rem solid #ffffff;
+			}
+			header h3{
+				font-size: 1rem;
+			}
+			header .che{
+				font-size: 0.8rem;
+				border-right: 1rem solid #ffffff;
+			}
+			#pic{
+				width: 100%;
+				margin-top: 3rem;
+			}
+			#pic img{
+				width: 100%;
+				height: 10rem;
+			}
+			section{
+				width: 100%;
+				height: 3.6rem;
+				background-color: #ffffff;
+			}
+			section h1{
+				color: black;
+				font-size: 0.8rem;
+				padding: 2% 0 0 5%;
+			}
+			section div{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 6%;
+			}
+			section div p{
+				color: deeppink;
+				font-size: 0.7rem;
+				padding-left: 5%;
+			}
+			section div p del{
+				color: gainsboro;
+				font-size: 0.7rem;
+			}
+			section div h2{
+				padding-right: 3%;
+				font-size: 0.65rem;
+				color: darkgray;
+			}
+			hgroup{
+				width: 100%;
+				height: 9rem;
+				background-color: #f3efee;
+				overflow: hidden;
+				position: relative;
+			}
+			hgroup h2{
+				color: black;
+				font-size: 0.8rem;
+				margin: 4% 0 0 10%;
+			}
+			hgroup h2 span{
+				color: deeppink;
+				font-size: 0.8rem;
+			}
+			hgroup .box{
+				display: flex;
+				justify-content: flex-start;
+				align-content: center;
+				margin:3% 0 3% 9%;
+			}
+			hgroup .box .btn{
+				width: 41%;
+				height: 1.35rem;
+			}
+			hgroup .box .btn input{
+				font-size: 0.6rem;
+				width: 31.3%;
+				height: 1.35rem;
+				text-align: center;
+				line-height: 1.35rem;
+				border: none;
+				outline: none;
+			}
+			hgroup .box .btn input:nth-child(1),hgroup .box .btn input:nth-child(1){
+				background-color: #f7f7f7;
+			}
+			hgroup .box .btn input:nth-child(2){
+				background-color: #ffffff;
+				color: deeppink;
+				height: 1.24rem;
+			}
+			hgroup .box p{
+				font-size: 0.8rem;
+				color: #ff0000;
+				margin-top: 0.3rem;
+			}
+			hgroup h3{
+				font-size: 0.8rem;
+				color: black;
+				margin: 3% 0 2.5% 8%;
+			}
+			hgroup h3 span{
+				color: deeppink;
+			}
+			#xzkd{
+				width: 24%;
+				height: 1.9rem;
+				margin: 0 0 0 8%;
+				border-radius: 7px;
+				outline: none;
+				font-size: 0.6rem;
+				background-color: #FFFFFF;
+				border: 1px solid gainsboro;
+				text-align: center;
+				line-height: 1.9rem;
+				color: black;
+			}
+			hgroup .kuaibox{
+				width: 100%;
+				height: 2.25rem;
+				display: flex;
+				align-items: center;
+			}
+			hgroup .kuaidi{
+				display: none;
+				width: 24%;
+				height: 1.9rem;
+				background-color: #ff86af;
+				border-radius: 7px;
+				color: white;
+				text-align: center;
+				line-height: 1.9rem;
+				margin-left: 8%;
+				font-size: 0.6rem;
+			}
+			#diya{
+				width: 100%;
+				height: 2.375rem;
+				background-color: #ffffff;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				color: black;
+				font-size: 0.8rem;
+			}
+			#diya p{
+				color: orange;
+				font-size: 1rem;
+				border-left: 1rem solid #fff;
+				border-right: 1rem solid #fff;
+			}
+			#diya span{
+				color: #ff86af;
+			    margin-left: 50%;
+				font-size: 0.9rem;
+			}
+			#kong{
+				width: 100%;
+				height: 0.3rem;
+				background-color: #f3efee
+			}
+			#daili{
+				width: 100%;
+				height: 3.05rem;
+				background-color: #ffffff;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				position: relative;
+			}
+			#daili .tou{
+				width: 12%;
+				height: 2rem;
+				overflow: hidden;
+				border-radius: 50%;
+				margin-left: 5%;
+				margin-right: 0.2rem;
+			}
+			#daili .tou img{
+				width: 152%;
+			}
+			#daili div h1{
+				color: #ff6567;
+				font-size: 0.7rem;
+				line-height: 1rem;
+			}
+			#daili div h2{
+				color: #ccc2c9;
+				font-size: 0.7rem;
+				line-height: 1rem;
+			}
+			#daili p{
+				width: 21%;
+				background-color: #fcce33;
+				color: black;
+				text-align: center;
+				height: 1.02rem;
+				top: 35%;
+				position: absolute;
+    			right: 2%;
+				border-radius: 7px;
+				font-size: 0.5rem;
+				box-shadow: -1px 0 0 rgba(295,196,102,0.8);
+				padding-top: 0.3rem;
+			}
+			#details{
+				width: 100%;
+				margin-top: 1rem;
+			}
+			#details h3{
+				color: black;
+				font-size: 1rem;
+				padding-left: 8%;
+			}
+			#details img{
+				width: 100%;
+				margin-top: 0.5rem;
+			}
+			#details .liubai{
+				width: 100%;
+				height: 4rem;
+			}
+			footer{
+				width: 100%;
+				height: 2.7rem;
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				background-color: #FFFFFF;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			}
+			footer .add{
+				width: 24%;
+				height: 1.75rem;
+				/*background-color: #9bd674;*/
+				background-color: #f3efee;
+				color: white;
+				font-size: 0.8rem;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 1.75rem;
+			    margin-right: 2%;
+			}
+			footer .buy{
+				width: 24%;
+				height: 1.75rem;
+				/*background-color: #ff6161;*/
+				background-color: #f3efee;
+				color: white;
+				font-size: 0.8rem;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 1.75rem;
+			    margin-right: 2%;
+			}
+			#kd{
+				width: 100%;
+				height: 9rem;
+				position: fixed;
+				bottom: 0;
+				background-color: #FFFFFF;
+				opacity: 0.9;
+				z-index: 9999999;
+				display: none;
+			}
+			#kd .box{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			#kd p{
+				color: dodgerblue;
+				font-size: 0.8rem;
+				opacity: 0.8;
+				padding: 0.2rem 0 2rem 0.5rem;
+			}
+			#kd h5{
+				color: dodgerblue;
+				font-size: 0.8rem;
+				opacity: 0.8;
+				padding: 0.2rem 0.5rem 2rem 0;
+			}
+			#kd ul{
+				width: 100%;
+				text-align: center;
+			}
+			#kd ul li{
+				text-align: center;
+				line-height: 1.3rem;
+				color: black;
+				opacity: 0.7;
+				font-size: 0.9rem;
+			}
+			#kd .hei{
+				width: 100%;
+				height: 1.2rem;
+				position: absolute;
+				top: 49%;
+				left: 0;
+				background-color: white;
+				opacity: 1;
+			} 
+			#dyj{
+				width: 70%;
+				height: 6rem;
+				position: fixed;
+				top: 20%;
+				left: 15%;
+				background-color: white;
+				opacity: 0.8;
+				color: deeppink;
+				text-align: center;
+				line-height: 6rem;
+				font-size: 0.9rem;
+				border-radius: 7px;
+				z-index: 888;
+				display: none;
+			}
+			#fei{
+				font-size: 1rem;
+				color: deeppink;
+				position: absolute;
+				top: 5%;
+				right: 36%;
+				display: none;
+				opacity: 1;
+			}
+			/*.xfei{
+				animation: fei 1.5s both;
+			}
+			@keyframes fei{
+				0{
+					transform: translateY(0);
+					opacity: 1;
+				}
+				100%{
+					transform: translateY(-15px);
+					opacity: 0;
+				}
+			}*/
+			#xs{
+				color: red;
+				position: absolute;
+				top: 78%;
+				left: 38%;
+				z-index: 9999999999999999999;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="xs">请选择快递</div>
+		<div id="dyj">
+			暂无抵押券哦0.0
+		</div>
+		<div id="kd">
+			<div class="hei"></div>
+			<div class="box">
+				<p>确定</p>
+				<h5>返回</h5>
+			</div>
+			<ul id="list">
+				<li class="page1 page">中通快递</li>
+				<li class="page2 page">申通快递</li>
+				<li class="page3 page">中国邮政</li>
+				<li class="page4 page">韵达快递</li>
+			</ul>
+		</div>
+		<header>
+			<a href="index.html"><</a>
+			<h3>宝贝详情</h3>
+			<div class="iconfont icon-gouwuche che"></div>
+		</header>
+		<div id="pic">
+			<!--<img src="../img/xingqing/03.jpg" alt="" title="" />-->
+		</div>
+		<section>
+			<!--<h1>韩国Royal巧克力</h1>
+			<div>
+				<p><span id="nowp">35.00</span><del>￥35.00</del></p>
+				<h2>香港</h2>
+			</div>-->
+		</section>
+		<hgroup>
+			<h2>数量:<span>(库存为：100)</span></h2>
+			<div class="box">
+				<div class="btn">
+					<input id="jian" type="button" value="-" />
+					<input id="val" type="text" value="1" disabled="disabled"/>
+					<input id="jia" type="button" value="+" />
+				</div>
+				<p>￥:<em id="zp"></em>元</p>
+			</div>
+			<hr />
+			<h3>运费：<span>￥10元</span></h3>
+			<div class="kuaibox">
+				<div id="xzkd">快递选择</div>
+				<div class="kuaidi"></div>
+			</div>
+		</hgroup>
+		<div id="diya">
+			<p class="iconfont icon-fenlei"></p>
+			店铺抵押卷
+			<span>></span>
+		</div>
+		<div id="kong"></div>
+		<div id="daili">
+			<div class="tou">
+				<img src="../img/xingqing/02.jpg" alt="" title="" />
+			</div>
+			<div>
+				<h1>香港国外进口零食招聘代理</h1>
+				<h2>微信号：jilingshi3590</h2>
+			</div>
+			<a href="index.html"><p>进入店铺</p></a>
+		</div>
+		
+		<div id="details">
+			<!--<h3>商品详情</h3>
+			<img src="../img/xingqing/03.jpg" alt="" title="" />
+			<img src="../img/xingqing/03.jpg" alt="" title="" />
+			<div class="liubai"></div>-->
+		</div>
+		
+		<footer>
+			<!--<p class="add">
+				加入购物车
+			</p>
+			<div class="buy">
+				立即购买
+			</div>
+			<p id="fei" class="iconfont icon-gouwuche xfei"></p>-->
+		</footer>
+		<script type="text/javascript" src="../js/jquery-1.11.1.min.js" ></script>
+		<script type="text/javascript" src="../js/rem.js" ></script>
+		<script type="text/javascript" src="../js/xingqing.js" ></script>
+		<script type="text/javascript" src="../js/myCookie.js" ></script>
+	</body>
+</html>

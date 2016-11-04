@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="../iconfont/iconfont.css"/>
+		<link rel="stylesheet" href="../css/Hot2.css" />
+		<link rel="stylesheet" href="../css/swiper.min.css" />
+		<script type="text/javascript" src="../js/zepto.js" ></script>
+		<script type="text/javascript" src="../js/rem.js" ></script>
+		<title></title>
+	</head>
+	<body>
+		<!--头部-Start-->
+		<header>
+			<a id="fa"><img src="../img/hot/sousuo.png"></a>
+			<input type="text" value="" id="txt1" placeholder="搜索热门宝贝或店铺">
+			<a href="gouwuche.html" class="fb"><img src="../img/hot/gouwuche.png"></a>	
+		</header>		
+		<!--热搜------>	
+		 <div id="box">
+			<dl>
+				<dt></dt>
+				<dd></dd>
+				<dd></dd>
+				<dd><input type="button" value="" class="btn"></dd>
+			</dl>
+		 </div>
+		<!--底部-Start----->
+		<footer>
+			<dl>
+				<dt class="iconfont icon-shouye foot"></dt>
+				<dd id="foot1">首页</dd>
+			</dl>
+			<dl>
+				<dt class="iconfont icon-fangdajing foot"></dt>
+				<dd id="foot2">热搜</dd>
+			</dl>
+			<dl>
+				<dt class="iconfont icon-iconfont foot"></dt>
+				<dd id="foot3">返利专场</dd>
+			</dl>
+			<dl>
+				<dt class="iconfont icon-wode foot"></dt>
+				<dd id="foot4">我的微购</dd>
+			</dl>
+		</footer>
+		<div style="height: 3rem;"></div>
+	</body>
+	<script>     
+		//底部导航链接
+		var foot1 = document.getElementById("foot1");
+		//var foot2 = document.getElementById("foot2");
+		var foot3 = document.getElementById("foot3");
+		var foot4 = document.getElementById("foot4");		
+		foot1.onclick = function(){
+			window.location.href="index.html";
+		}
+		foot3.onclick = function(){
+			window.location.href="fanli.html";
+		}
+		foot4.onclick = function(){
+			window.location.href="wodeweigou.html";
+		}	
+		//商品列表
+			$.ajax({
+				url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+				dataType:"jsonp",
+				success:function(data){
+					console.log(data);
+					var str = '';
+					for(var i in data){				
+						str+='<dl>'
+						str+='<dt class="fa">'+'<img src="'+data[i].goodsListImg+'">'+'</dt>'
+						str+='<dd class="thre">'+'<a href="javascript:;">'+data[i].goodsName+'</a>'+'</dd>'
+						str+='<dd class="sec">'+'￥'+data[i].price+'</dd>'
+			      str+='<dd class="four">'+'<input type="button" value="加入购物车" class="btn" dataid="'+data[i].goodsID+'">'+'</dd>'
+						str+='</dl>'										
+					}
+					$("#box").html(str);
+				}
+			});			
+		
+		//加入购物车
+		$("#box").on("click",".btn",function(){
+			var name = localStorage.getItem("name");
+			var spid = $(this).attr("dataid");
+			$.ajax({			
+				url:"http://datainfo.duapp.com/shopdata/updatecar.php",
+				data:{
+					userID:name,
+					goodsID:spid
+				},
+				success:function(data){
+					alert("加入购物车成功！");
+					if(data==1){
+						window.location.href="gouwuche.html";
+					}
+				}
+
+			});
+		})	
+		//搜索
+		var txt1 = document.getElementById("txt1");
+		var fa = document.getElementById("fa");
+		$("#box").html("");
+		fa.onclick = function(){
+			$.ajax({
+				url:"http://datainfo.duapp.com/shopdata/selectGoodes.php",
+				dataType:"jsonp",
+				data:{
+					selectText:document.getElementById("txt1").value
+				},
+				success:function(data){
+					console.log(data);
+					var str = '';
+					for(var i in data){				
+						str+='<dl>'
+						str+='<dt class="fa">'+'<img src="'+data[i].goodsListImg+'">'+'</dt>'
+						str+='<dd class="thre">'+'<a href="javascript:;">'+data[i].goodsName+'</a>'+'</dd>'
+						str+='<dd class="sec">'+'￥'+data[i].price+'</dd>'
+			      str+='<dd class="four">'+'<input type="button" value="加入购物车" class="btn" dataid="'+data[i].goodsID+'">'+'</dd>'
+						str+='</dl>'										
+					}
+					$("#box").html(str);
+				}
+			});			
+		}
+	</script>
+</html>
+

@@ -1,0 +1,161 @@
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	width:100%;
+	height:100%;
+	background:#f9b4a5;
+	position:relative;
+}
+.nav{
+	width:100%;
+	height:7rem;
+	text-align:center;
+}
+.nav img{
+	width:100%;
+	height:7rem;
+}
+.bigbg{
+	width:90%;
+	height:19rem;
+	background:#f6d0c5;
+	position: absolute;
+	left:4%;
+	top:8rem;
+}
+.bigbg .smallbg{
+	width:90%;
+	height:17rem;
+	background:white;
+	position: absolute;
+	left:5%;
+	top:1rem;
+	
+}
+.smallbg h3{
+	color:#666;
+	font-size:0.5rem;
+	line-height:2rem;
+	margin-left:5%;
+}
+.smallbg .inpu{
+	width:90%;
+	height:1.3rem;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	border:1px solid #999999;
+	margin-left:4%;
+}
+
+.inpu img{
+	width:9%;
+}
+.inpu input{
+	width:10rem;
+	height:1.3rem;
+	border:none;
+	background:white;
+}
+.smallbg .inpu1{
+	width:90%;
+	height:1.3rem;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin-top:1rem;
+	border:1px solid #999999;
+	margin-left:4%;
+}
+.inpu1:nth-child(3) img{
+	width:9%;
+}
+.inpu1:nth-child(3) input{
+	width:10rem;
+	height:1.3rem;
+	border:none;
+	background:white;
+}
+.smallbg #btn{
+	width:11.8rem;
+	height:1.8rem;
+	background:#ff669a;
+	margin-top:1rem;
+	border:none;
+	color:white;
+	margin-left:4%;
+}
+.smallbg #check{
+	
+	width:0.8rem;
+	height:0.8rem;
+	margin-left:5%;
+	background:white;
+	margin-top:0.5rem;
+}
+.smallbg span{
+	color:#ff669a;
+	font-size:0.8rem;
+	line-height:1rem;
+	padding:0;
+	margin:0;
+}
+.smallbg .fot{
+	width:100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin-top:0.5rem;
+}
+.fot .a1{
+	width:5rem;
+	height:1.3rem;
+	background:#1dadec;
+	color:white;
+	font-size:0.7rem;
+	line-height:1.2rem ;
+	text-decoration: none;
+	text-align: center;
+}
+ .fot .a2{
+	width:5rem;
+	height:1.3rem;
+	background:#3ac699;
+	color:white;
+	font-size:0.7rem;
+	line-height:1.2rem ;
+	text-decoration: none;
+	text-align: center;
+}
+.smallbg p{
+	display:block;
+	width:90%;
+	text-align: center;
+}
+.smallbg p a{
+	color:#999999;
+	font-size: 0.5rem;
+	text-decoration: none;
+}
+.smallbg .qq{
+	width:92%;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	margin-top:0.5rem;
+	margin-left:8%;
+}
+.qq img{
+	width:62%;
+}
+body{
+	position: relative;
+}
+.bottomimg {
+    position: absolute;
+    left: 39%;
+    bottom: 0;
+    width: 18%;
+}

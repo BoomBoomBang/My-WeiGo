@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../iconfont_address/iconfont.css">
+		<link rel="stylesheet" href="../css/locate.css">
+		<script src="../js/rem.js"></script>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		
+	</head>
+	<body>
+		<header>
+			<i class="iconfont icon-jinlingyingcaiicon01 font" id="btn1"></i>
+			<h2>收货地址</h2>
+			<span>添加</span>
+		</header>
+		<section>
+			<span id="write"></span>
+		</section>
+	</body>
+</html>
+<script>
+	$(function(){
+		$("#btn1").click(function(){
+			window.location.href="xinxi.html"
+		})
+		$("span").click(function(){
+			window.location.href="addlocate.html";
+		})
+	})
+	var keyArr = [];
+	var write = document.getElementById("write");
+	for(var i = 0;i<localStorage.length;i++){
+				var keyarr = localStorage.key(i).split("Y");
+				var str = localStorage.getItem(localStorage.key(i));
+				if(keyarr[0]=="userInfoh"){
+					keyArr.push(localStorage.key(i));
+					var arr = localStorage.getItem(localStorage.key(i)).split(",");
+					var prov = arr[0];
+					var city = arr[1];
+					var dist = arr[2];
+					var addr = arr[3];
+					write.innerHTML += "<p>&nbsp;姓名："+prov+"</p>"
+						+"<p style='margin-top:2%;'>&nbsp;电话："+city+"</p>"
+						+"<p style='margin-top:2%;'>&nbsp;邮编："+dist+"</p>"
+						+"<p style='margin-top:2%;'>&nbsp;地址："+addr+"</p>"
+					 
+				}
+			}
+//	var str = localStorage.getItem(localStorage.getItem("userInfos"));
+	//console.log(str);
+//	var str1 = localStorage.getItem("userInfos");
+//	var str = localStorage.getItem("userInfos");
+//	var userInfo = JSON.parse(str1);
+//	var write = document.getElementById("write");
+//	console.log(userInfo.username);
+//	write.innerHTML += "<p>&nbsp;姓名："+userInfo.username+"</p>"
+//						+"<p style='margin-top:2%;'>&nbsp;电话："+userInfo.userphone+"</p>"
+//						+"<p style='margin-top:2%;'>&nbsp;邮编："+userInfo.useremail+"</p>"
+//						+"<p style='margin-top:2%;'>&nbsp;地址："+userInfo.userlocate+"</p>"
+//					 
+//"姓名:"+userInfo.username+"&emsp;电话:"+userInfo.userphone+"&emsp;邮编："+userInfo.useremail+"&emsp;地址:"+userInfo.userlocate;
+	
+	
+	
+	write.style.color = "gray";
+	
+</script>

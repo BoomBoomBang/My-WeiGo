@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
+		<title></title>
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<script src="../js/mathlib-min.js"></script>
+		<script src="../js/k3d-min.js"></script>
+		<script src="../js/html5logo.js"></script>
+		<style>
+			*{
+		    margin: 0;
+		    padding: 0;
+		 }
+		 html,body{
+		    height: 100%; 
+		    width: 100%;
+		    overflow:hidden;
+		  }
+		 .box{
+		 	width: 100%;
+		 	height: 100%;
+		 }
+		 .box .top{
+		 	width: 100%;
+		 	height: 3rem;
+		 	background: #F7F7F7;
+		 	display: flex;
+		 }
+		 .top p{
+		 	width: 20%;
+		 	text-align: center;
+		 	font-size: 1.5rem;
+		 	color: #ff6599;
+		 	line-height: 3rem;
+		 }
+		 .top h2{
+		 	width: 80%;
+		 	text-align: center;
+		 	font-size: 1rem;
+		 	color: #ff6599;
+		 	line-height: 3rem;
+		 }
+		 .main{
+		 	width: 100%;
+		 	height: 90%;
+		 	background: url(../img/yaoyiyao/bg.png);
+		 	background-size:100%;
+		 	position: relative;
+		 	overflow: hidden;
+		 	
+		 }
+		 @keyframes yao{
+		 	0%{transform: translateX(0rem);}
+		 	50%{transform: translateX(1rem);}
+		 	100%{transform: translateX(0rem)}
+		 }
+		 .main img{
+		 	position: absolute;
+		 	left: 20%;
+		 	top: 18%;
+		 	width: 8.5rem;
+		 	height: 8.5rem;
+		 	z-index: 1;
+		 	animation: yao 0.5s linear infinite;
+		 }
+		 .main .word{
+		 	width: 46%;
+		 	height: 32%;
+		 	position: absolute;
+		 	left: 4rem;
+		 	bottom: 2.3rem;
+		 	background: #ffeea9;
+		 	box-shadow: 10px 10px 10px #007AFF;
+		 	z-index: 1;
+		 	border-top: 5px solid #FF6599;
+		 	border-radius: 1rem;
+		 } 
+		 
+		 .word p{
+		 	font-size: 0.5rem;
+		 	font-weight: 600;
+		 	color: black;
+		 	line-height:0.8rem ;
+		 	
+		 }
+		    canvas{
+		    	position: absolute;
+		    	left: 0;
+		    	top:-20%;
+		    	z-index: 0;
+		    	width: 100%;
+		    	height: 100%;
+		    }
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="top">
+				<p><</p>
+				<h2>欢乐摇现金</h2>
+			</div>
+			<div class="main">
+				<img src="../img/yaoyiyao/yao.png"/>
+				<div class="word">
+					<p>&nbsp;1、欢乐摇现金的现金来源：微店购物官方提供和商家发布产品推广；</p>
+					<p>&nbsp;2、商家发布的摇一摇推广单次金额越大，摇到的概率也会增大；</p>
+					<p>&nbsp;3、用户摇到相应的奖金后自动充值到用户余额；</p>
+					<p>&nbsp;4、本活动与Apple lnc.无关</p>					
+				</div>
+					<canvas id="canvas"></canvas>		
+				</div>
+				
+		</div>
+		
+	</body>
+</html>

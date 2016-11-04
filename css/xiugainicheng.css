@@ -1,0 +1,87 @@
+
+*{
+	margin:0;
+	padding: 0;
+}
+ul,ol,li{
+	list-style: none;
+}
+a,u{
+	text-decoration: none;
+}
+body,html{
+	height:100%;
+	width: 100%;
+	background: #eee;
+}
+button,input{
+	border: 0 none;
+	outline: 0 none;
+}
+
+header{
+	width:100%;
+	height: 3rem;
+	display: flex;
+	justify-content: space-between;
+	background: #fff;
+	position: relative;
+}
+
+header #btn1{
+	width:0.625rem;
+	height:1.125rem;
+	position: absolute;
+	left:10%;
+	top:30%;
+	
+	background: url(../img/nichengimg/back1.jpg) no-repeat;
+	background-size: 100% 100%;
+	
+}
+header h1{
+	width:100%;
+	height:3rem;
+	line-height: 3rem;
+	font-size: 0.65rem;
+	color:#ff6599;
+	text-align: center;
+}
+.name{
+
+	width: 100%;
+	margin-top:1rem;
+
+	position: relative;
+	
+}
+ 
+.txt{
+	width:100%;
+	height: 2.75rem;
+	text-align: left;
+	text-indent: 0.6rem;
+	line-height: 2.75rem;
+	border-bottom: 1px solid #dad9d9;
+}
+#txt1{
+	
+
+	margin-bottom:1rem;
+	
+}
+#txt2{
+	border-top: ;
+}
+#surebtn1{
+	width:14.9rem ;
+	height: 1.775rem;
+	background: url(../img/nichengimg/surebtn1.jpg) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top:13rem;
+	left:0.65rem;
+	
+	
+	
+}
